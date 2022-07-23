@@ -6,13 +6,13 @@
 #    By: macourio <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/23 10:44:22 by macourio          #+#    #+#              #
-#    Updated: 2022/07/23 10:48:32 by macourio         ###   ########lyon.fr    #
+#    Updated: 2022/07/23 10:52:33 by macourio         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 CC      =   gcc
 CFLAGS  =   -Wall -Wextra -Werror
-SRCS    =   $(shell find . -type f -name *.c)
+SRCS    =   $(wildcard $(SRCDIR)/.c)
 SRCDIR  =   srcs
 OBJDIR  =   obj
 OBJ     =   $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
