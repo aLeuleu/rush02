@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: macourio <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: alevra <alevra@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/23 10:44:22 by macourio          #+#    #+#              #
-#    Updated: 2022/07/23 10:52:33 by macourio         ###   ########lyon.fr    #
+#    Updated: 2022/07/23 11:03:43 by alevra           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ $(NAME):    $(OBJ)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -o $@ -c $<
+	$(CC) $(CFLAGS) -o $@ -c $< -I ./includes
 
 clean:
 	rm -rf $(OBJDIR)/*.o
